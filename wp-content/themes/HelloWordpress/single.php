@@ -11,7 +11,7 @@ get_header(); ?>
 <?php get_template_part( 'template-parts/featured-image' ); ?>
 
 <div id="single-post" role="main">
-
+<h1>JE SUIS DANS LE SINGLE</h1>
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>
 	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
