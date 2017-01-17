@@ -8,22 +8,25 @@
  * @since FoundationPress 1.0.0
  */
 
-/* <?php foundationpress_entry_meta(); ?>*/
 ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?>>
+	<div class="meta">
+		<div class="row collapse">
+			<div class="small-9 columns"><?php the_category(", "); ?></div>
+			<div class="small-3 columns text-right"><?php the_date(); ?></div>
+		</div>
+	</div>
 	<header>
-		<h1>FIRST</h1>
-		<h3><?php the_category(); ?></h3>
-		<h3><?php the_date(); ?></h3>
-		<?php the_post_thumbnail(); ?>
 		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-
 	</header>
+	<?php get_template_part('template-parts/img'); ?>
+	
+
 
 	<div class="entry-content">
 		<?php the_excerpt(); ?>
-		<a href="<?php the_permalink(); ?>">Lire la suite</a>
+		<a href="<?php the_permalink(); ?>">Lire la suite...</a>
 	</div>
 	<footer>
 		<?php $tag = get_the_tags(); if ( $tag ) { ?><p><?php the_tags(); ?></p><?php } ?>

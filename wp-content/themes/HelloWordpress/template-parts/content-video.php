@@ -7,15 +7,14 @@
  * @package FoundationPress
  * @since FoundationPress 1.0.0
  */
-
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry wow slideInLeft'); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?>>
 	<div class="meta">
 		<?php the_category(", "); ?>
 		<?php the_date(); ?>
 	</div>
-<?php get_template_part('template-parts/img'); ?>
+	<?php get_template_part('template-parts/img'); ?>
 
 	<header>
 		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
